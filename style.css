@@ -1,30 +1,18 @@
-/* ================================================
-   PORTFOLIO STYLESHEET
-   Aesthetic: Editorial Dark / Amber accent
-   Fonts: Syne (display) + DM Sans (body)
-   ================================================ */
-
-
-/* -----------------------------------------------
-   1. CSS CUSTOM PROPERTIES (Design Tokens)
------------------------------------------------ */
 :root {
-  /* Color palette — light mode */
-  --bg:          #f5f3ee;       /* warm off-white background */
-  --bg-alt:      #eceae3;       /* slightly darker for alternating sections */
-  --surface:     #ffffff;       /* card / form surfaces */
-  --border:      #dedad2;       /* subtle borders */
-  --text:        #1a1814;       /* primary text */
-  --text-muted:  #7a756c;       /* secondary / muted text */
-  --accent:      #e06c2b;       /* vibrant amber-orange accent */
-  --accent-dark: #b8541e;       /* darker accent for hover states */
-  --accent-soft: rgba(224, 108, 43, 0.12); /* translucent accent for backgrounds */
 
-  /* Typography */
+  --bg:          #f5f3ee;       
+  --bg-alt:      #eceae3;       
+  --surface:     #ffffff;       
+  --border:      #dedad2;       
+  --text:        #1a1814;       
+  --text-muted:  #7a756c;       
+  --accent:      #e06c2b;       
+  --accent-dark: #b8541e;       
+  --accent-soft: rgba(224, 108, 43, 0.12); 
+
   --font-display: 'Syne', sans-serif;
   --font-body:    'DM Sans', sans-serif;
 
-  /* Spacing scale */
   --space-xs:  0.5rem;
   --space-sm:  1rem;
   --space-md:  1.5rem;
@@ -32,7 +20,6 @@
   --space-xl:  4rem;
   --space-2xl: 7rem;
 
-  /* Borders & shadows */
   --radius-sm:  6px;
   --radius-md:  14px;
   --radius-lg:  24px;
@@ -40,11 +27,9 @@
   --shadow-md:  0 6px 24px rgba(0,0,0,0.10);
   --shadow-lg:  0 16px 48px rgba(0,0,0,0.12);
 
-  /* Transitions */
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark mode overrides — applied when body has class .dark */
 body.dark {
   --bg:          #111010;
   --bg-alt:      #181716;
@@ -60,10 +45,6 @@ body.dark {
   --shadow-lg:   0 16px 48px rgba(0,0,0,0.5);
 }
 
-
-/* -----------------------------------------------
-   2. RESET & BASE STYLES
------------------------------------------------ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -71,7 +52,7 @@ body.dark {
 }
 
 html {
-  /* Smooth scrolling for anchor links */
+
   scroll-behavior: smooth;
   font-size: 16px;
 }
@@ -82,41 +63,30 @@ body {
   color: var(--text);
   line-height: 1.7;
   transition: background-color var(--transition), color var(--transition);
-  overflow-x: hidden; /* prevent horizontal scroll from animations */
+  overflow-x: hidden; 
 }
 
-/* Remove bullet points from all lists */
 ul { list-style: none; }
 
-/* Remove underline from all links */
 a { text-decoration: none; color: inherit; }
 
-/* Make images responsive by default */
 img { max-width: 100%; display: block; }
 
-/* -----------------------------------------------
-   3. REUSABLE LAYOUT UTILITIES
------------------------------------------------ */
-
-/* Centered content container with max width */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
 
-/* Standard section padding */
 .section {
   padding: var(--space-2xl) 0;
 }
 
-/* Alternating background for visual separation */
 .about,
 .achievements {
   background-color: var(--bg-alt);
 }
 
-/* Section eyebrow label (e.g. "About Me") */
 .section-label {
   font-family: var(--font-display);
   font-size: 0.78rem;
@@ -127,7 +97,6 @@ img { max-width: 100%; display: block; }
   margin-bottom: var(--space-xs);
 }
 
-/* Section main title */
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3rem);
@@ -137,12 +106,6 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 
-
-/* -----------------------------------------------
-   4. BUTTONS
------------------------------------------------ */
-
-/* Base button shared styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -157,7 +120,6 @@ img { max-width: 100%; display: block; }
   border: 2px solid transparent;
 }
 
-/* Filled primary button */
 .btn-primary {
   background-color: var(--accent);
   color: #ffffff;
@@ -170,7 +132,6 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 8px 20px rgba(224, 108, 43, 0.35);
 }
 
-/* Outlined secondary button */
 .btn-outline {
   background-color: transparent;
   color: var(--text);
@@ -182,10 +143,8 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-/* Full-width button variant */
 .btn-full { width: 100%; justify-content: center; }
 
-/* Small button (used in project cards) */
 .btn-sm {
   display: inline-flex;
   align-items: center;
@@ -212,11 +171,6 @@ img { max-width: 100%; display: block; }
 }
 .btn-accent:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 
-
-/* -----------------------------------------------
-   5. SCROLL REVEAL ANIMATION
-   (JS adds .visible class via IntersectionObserver)
------------------------------------------------ */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -228,7 +182,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
-/* Variant: slide in from right */
 .reveal-right {
   transform: translateX(40px);
 }
@@ -236,31 +189,25 @@ img { max-width: 100%; display: block; }
   transform: translateX(0);
 }
 
-
-/* -----------------------------------------------
-   6. NAVBAR
------------------------------------------------ */
 .navbar {
-  position: fixed;           /* stays at top when scrolling */
+  position: fixed;           
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   padding: 1.1rem 0;
   background-color: rgba(245, 243, 238, 0.85);
-  backdrop-filter: blur(12px);          /* frosted-glass effect */
+  backdrop-filter: blur(12px);          
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition), background-color var(--transition), padding var(--transition);
 }
 
-/* When scrolled, the navbar gets a visible bottom border */
 .navbar.scrolled {
   border-bottom-color: var(--border);
   padding: 0.7rem 0;
 }
 
-/* Dark mode navbar */
 body.dark .navbar {
   background-color: rgba(17, 16, 16, 0.88);
 }
@@ -274,7 +221,6 @@ body.dark .navbar {
   justify-content: space-between;
 }
 
-/* Logo / brand text */
 .nav-logo {
   font-family: var(--font-display);
   font-size: 1.4rem;
@@ -284,7 +230,6 @@ body.dark .navbar {
 }
 .nav-logo .dot { color: var(--accent); }
 
-/* Horizontal nav links */
 .nav-links {
   display: flex;
   gap: var(--space-lg);
@@ -300,7 +245,6 @@ body.dark .navbar {
   position: relative;
 }
 
-/* Underline indicator for active / hover nav links */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -320,14 +264,12 @@ body.dark .navbar {
   width: 100%;
 }
 
-/* Right-side controls (theme toggle + hamburger) */
 .nav-controls {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
 }
 
-/* Dark mode toggle button */
 .theme-toggle {
   background: var(--accent-soft);
   border: none;
@@ -346,7 +288,6 @@ body.dark .navbar {
   transform: rotate(20deg);
 }
 
-/* Hamburger button — hidden on desktop */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -365,17 +306,12 @@ body.dark .navbar {
   transition: var(--transition);
 }
 
-/* Hamburger becomes an X when nav is open */
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-
-/* -----------------------------------------------
-   7. HERO SECTION
------------------------------------------------ */
 .hero {
-  min-height: 100vh;        /* fill the full viewport */
+  min-height: 100vh;        
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,7 +322,6 @@ body.dark .navbar {
   position: relative;
 }
 
-/* Decorative soft blobs in background */
 .hero-blob {
   position: absolute;
   border-radius: 50%;
@@ -414,7 +349,6 @@ body.dark .navbar {
   max-width: 560px;
 }
 
-/* Small pill / tag above the main title */
 .hero-tag {
   display: inline-block;
   background: var(--accent-soft);
@@ -428,7 +362,6 @@ body.dark .navbar {
   margin-bottom: var(--space-md);
 }
 
-/* Main name heading */
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4rem);
@@ -437,10 +370,8 @@ body.dark .navbar {
   margin-bottom: var(--space-sm);
 }
 
-/* Accent color text highlight */
 .highlight { color: var(--accent); }
 
-/* Subtitle / role */
 .hero-subtitle {
   font-family: var(--font-display);
   font-size: 1rem;
@@ -450,7 +381,6 @@ body.dark .navbar {
   letter-spacing: 0.01em;
 }
 
-/* Intro paragraph */
 .hero-intro {
   font-size: 1.05rem;
   color: var(--text-muted);
@@ -459,20 +389,17 @@ body.dark .navbar {
   line-height: 1.8;
 }
 
-/* Button group */
 .hero-cta {
   display: flex;
   gap: var(--space-sm);
   flex-wrap: wrap;
 }
 
-/* Right side — avatar visual */
 .hero-visual {
   position: relative;
   flex-shrink: 0;
 }
 
-/* Glowing ring around avatar */
 .avatar-ring {
   width: 280px;
   height: 280px;
@@ -486,7 +413,6 @@ body.dark .navbar {
   to { transform: rotate(360deg); }
 }
 
-/* Inner avatar circle — the actual photo placeholder */
 .avatar-placeholder {
   width: 100%;
   height: 100%;
@@ -499,14 +425,13 @@ body.dark .navbar {
   font-size: 3.5rem;
   font-weight: 800;
   color: var(--accent);
-  /* Stop inner from spinning */
+
   animation: counter-spin 8s linear infinite;
 }
 @keyframes counter-spin {
   to { transform: rotate(-360deg); }
 }
 
-/* Floating skill badges around the avatar */
 .badge {
   position: absolute;
   background: var(--surface);
@@ -528,7 +453,6 @@ body.dark .navbar {
   50%       { transform: translateY(-8px); }
 }
 
-/* Scroll-down arrow */
 .scroll-down {
   position: absolute;
   bottom: var(--space-md);
@@ -549,10 +473,6 @@ body.dark .navbar {
   50%       { transform: translateX(-50%) translateY(6px); }
 }
 
-
-/* -----------------------------------------------
-   8. ABOUT SECTION
------------------------------------------------ */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -583,7 +503,6 @@ body.dark .navbar {
 }
 .about-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* Education list inside about card */
 .edu-list { display: flex; flex-direction: column; gap: var(--space-sm); }
 .edu-list li {
   color: var(--text-muted);
@@ -593,10 +512,6 @@ body.dark .navbar {
 }
 .edu-list li strong { color: var(--text); }
 
-
-/* -----------------------------------------------
-   9. SKILLS SECTION
------------------------------------------------ */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -631,7 +546,6 @@ body.dark .navbar {
   color: var(--accent);
 }
 
-/* Progress bar track */
 .skill-bar {
   height: 8px;
   background: var(--bg-alt);
@@ -639,21 +553,18 @@ body.dark .navbar {
   overflow: hidden;
 }
 
-/* Filled portion — width is animated via CSS variable --level */
 .skill-fill {
   height: 100%;
-  width: 0%;               /* starts at 0; JS triggers the animation */
+  width: 0%;               
   background: linear-gradient(90deg, var(--accent), var(--accent-dark));
   border-radius: 100px;
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* When JS adds .animate class, the fill expands to --level */
 .skill-fill.animate {
   width: var(--level);
 }
 
-/* Tools sub-heading */
 .tools-title {
   font-family: var(--font-display);
   font-size: 1.2rem;
@@ -662,7 +573,6 @@ body.dark .navbar {
   color: var(--text);
 }
 
-/* Tools chips / tag grid */
 .tools-grid {
   display: flex;
   flex-wrap: wrap;
@@ -688,17 +598,12 @@ body.dark .navbar {
   box-shadow: var(--shadow-sm);
 }
 
-
-/* -----------------------------------------------
-   10. PROJECTS SECTION
------------------------------------------------ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-lg);
 }
 
-/* Card container */
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -713,7 +618,6 @@ body.dark .navbar {
   box-shadow: var(--shadow-lg);
 }
 
-/* Image area */
 .project-img {
   height: 180px;
   background: var(--accent-soft);
@@ -723,13 +627,11 @@ body.dark .navbar {
   overflow: hidden;
 }
 
-/* Emoji placeholder (replace with actual <img> tag) */
 .project-img-placeholder {
   font-size: 4rem;
   opacity: 0.7;
 }
 
-/* Card body */
 .project-body {
   padding: var(--space-md);
   display: flex;
@@ -737,7 +639,6 @@ body.dark .navbar {
   flex: 1;
 }
 
-/* Technology tags */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -769,7 +670,6 @@ body.dark .navbar {
   margin-bottom: var(--space-md);
 }
 
-/* Link buttons row */
 .project-links {
   display: flex;
   gap: var(--space-xs);
@@ -777,10 +677,6 @@ body.dark .navbar {
   margin-top: auto;
 }
 
-
-/* -----------------------------------------------
-   11. ACHIEVEMENTS SECTION
------------------------------------------------ */
 .achievements-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -799,7 +695,6 @@ body.dark .navbar {
   box-shadow: var(--shadow-md);
 }
 
-/* Dashed border style for placeholder cards */
 .achieve-placeholder {
   border-style: dashed;
   border-color: var(--border);
@@ -829,10 +724,6 @@ body.dark .navbar {
   line-height: 1.6;
 }
 
-
-/* -----------------------------------------------
-   12. CONTACT SECTION
------------------------------------------------ */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -872,7 +763,6 @@ body.dark .navbar {
 }
 .contact-link-icon { font-size: 1.1rem; }
 
-/* Contact Form Styles */
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -918,14 +808,12 @@ body.dark .navbar {
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-/* Placeholder text color */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
   opacity: 0.7;
 }
 
-/* Success message — hidden by default, shown by JS */
 .form-success {
   display: none;
   text-align: center;
@@ -939,10 +827,6 @@ body.dark .navbar {
   border: 1px solid rgba(34, 197, 94, 0.25);
 }
 
-
-/* -----------------------------------------------
-   13. FOOTER
------------------------------------------------ */
 .footer {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
@@ -962,15 +846,8 @@ body.dark .navbar {
   margin-top: 0.3rem;
 }
 
-
-/* -----------------------------------------------
-   14. RESPONSIVE / MOBILE STYLES
------------------------------------------------ */
-
-/* Tablet and below */
 @media (max-width: 900px) {
 
-  /* Stack hero vertically on smaller screens */
   .hero {
     flex-direction: column;
     text-align: center;
@@ -980,25 +857,21 @@ body.dark .navbar {
   .hero-intro { margin: 0 auto var(--space-lg); }
   .hero-cta { justify-content: center; }
 
-  /* Stack contact layout vertically */
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
 
-  /* Avatar size */
   .avatar-ring {
     width: 220px;
     height: 220px;
   }
 }
 
-/* Mobile phones */
 @media (max-width: 640px) {
 
-  /* Show hamburger, hide desktop links */
   .hamburger { display: flex; }
   .nav-links {
-    display: none;          /* hidden by default on mobile */
+    display: none;          
     position: fixed;
     top: 60px;
     left: 0;
@@ -1012,15 +885,11 @@ body.dark .navbar {
     z-index: 999;
   }
 
-  /* .open class added by JS to show the mobile menu */
   .nav-links.open { display: flex; }
 
-  /* Section title size on mobile */
   .section-title { font-size: 1.8rem; }
 
-  /* Smaller hero title */
   .hero-title { font-size: 2.2rem; }
 
-  /* Button side-by-side stays but allow wrapping */
   .hero-cta { flex-wrap: wrap; justify-content: center; }
 }

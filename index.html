@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivan Nicholas Salvador | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">IS<span class="dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☀</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero" id="hero">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+
+    <div class="hero-content reveal">
+      <span class="hero-tag">👋 Hello, World!</span>
+
+      <h1 class="hero-title">
+        I'm <span class="highlight">Ivan Nicholas Salvador</span>
+      </h1>
+
+      <p class="hero-subtitle">BS Information Technology Student · Future Web Developer</p>
+
+      <p class="hero-intro">
+        A passionate developer-in-training building clean, purposeful digital
+        experiences. I love turning ideas into real, working projects one line of code at a time.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal reveal-right">
+      <div class="avatar-ring">
+        <div class="avatar-placeholder">
+          <span>IS</span>
+        </div>
+      </div>
+      <div class="badge badge-html">HTML</div>
+      <div class="badge badge-css">CSS</div>
+      <div class="badge badge-js">JS</div>
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span class="scroll-arrow">↓</span>
+    </a>
+  </section>
+
+
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label reveal">About Me</div>
+      <h2 class="section-title reveal">Who I Am</h2>
+
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-icon">📖</div>
+          <h3>Biography</h3>
+          <p>
+            Hi! I'm <strong>Ivan Nicholas Salvador</strong>, a college student from Cagayan de Oro, Philippines
+            studying BS Information Technology at STI College Cagayan de Oro. I have a deep curiosity for how
+            things work on the web and love building solutions that make life easier.
+            When I'm not coding, you'll find me gaming or watching tech tutorials.
+          </p>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="about-icon">🎓</div>
+          <h3>Education</h3>
+          <ul class="edu-list">
+            <li>
+              <strong>BS Information Technology</strong><br />
+              <span>STI College Cagayan de Oro · 2022 – Present</span>
+            </li>
+            <li>
+              <strong>Senior High School – ICT Strand</strong><br />
+              <span>Your Senior High School · 2020 – 2022</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="about-icon">🚀</div>
+          <h3>Career Goals</h3>
+          <p>
+            My goal is to become a <strong>Full-Stack Developer</strong> specializing in
+            building scalable web applications. I aspire to work on real-world projects
+            that positively impact communities and continuously grow my skills in modern
+            web technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label reveal">What I Know</div>
+      <h2 class="section-title reveal">My Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-item reveal" data-level="85">
+          <div class="skill-header">
+            <span class="skill-name">🌐 HTML5</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--level: 85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal" data-level="75">
+          <div class="skill-header">
+            <span class="skill-name">🎨 CSS3</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--level: 75%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal" data-level="65">
+          <div class="skill-header">
+            <span class="skill-name">⚡ JavaScript</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--level: 65%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal" data-level="55">
+          <div class="skill-header">
+            <span class="skill-name">🐘 PHP</span>
+            <span class="skill-pct">55%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--level: 55%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal" data-level="50">
+          <div class="skill-header">
+            <span class="skill-name">🗄️ MySQL</span>
+            <span class="skill-pct">50%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--level: 50%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal" data-level="40">
+          <div class="skill-header">
+            <span class="skill-name">⚛️ React (Learning)</span>
+            <span class="skill-pct">40%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--level: 40%"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="tools-title reveal">Tools & Frameworks</h3>
+      <div class="tools-grid">
+        <div class="tool-card reveal">🔧 VS Code</div>
+        <div class="tool-card reveal">🐙 Git & GitHub</div>
+        <div class="tool-card reveal">📱 Flutter (Basics)</div>
+        <div class="tool-card reveal">🎨 Figma</div>
+        <div class="tool-card reveal">🔥 Firebase</div>
+        <div class="tool-card reveal">📦 npm</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label reveal">What I've Built</div>
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <!-- Placeholder image — replace src with an actual screenshot -->
+          <div class="project-img">
+            <div class="project-img-placeholder">🏨</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Dart</span>
+            </div>
+            <h3 class="project-title">Hotel Reservation Mobile App</h3>
+            <p class="project-desc">
+              A full-featured mobile application with complete CRUD functionality
+              for managing hotel reservations. Users can create, view, update, and
+              delete bookings in real time using Firebase as the backend.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn-sm btn-ghost">GitHub ↗</a>
+              <a href="#" class="btn-sm btn-accent">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder">🎓</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Capstone Project</h3>
+            <p class="project-desc">
+              <!-- Replace with your actual capstone description -->
+              A comprehensive system developed as a capstone requirement.
+              Details and technologies to be updated once finalized. 
+              Stay tuned for the full showcase!
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn-sm btn-ghost">GitHub ↗</a>
+              <a href="#" class="btn-sm btn-accent">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder">⚡</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+            <h3 class="project-title">Mini Projects Collection</h3>
+            <p class="project-desc">
+              A growing collection of small but polished mini-projects including
+              a to-do app, weather widget, calculator, and more — all built
+              with vanilla HTML, CSS, and JavaScript.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn-sm btn-ghost">GitHub ↗</a>
+              <a href="#" class="btn-sm btn-accent">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-label reveal">Recognition</div>
+      <h2 class="section-title reveal">Achievements & Certificates</h2>
+
+      <div class="achievements-grid">
+
+        <div class="achieve-card reveal">
+          <div class="achieve-icon">🏅</div>
+          <h3>HTML, CSS, & JavaScript Certificate</h3>
+          <p class="achieve-issuer">Coursera / freeCodeCamp · 2024</p>
+          <p class="achieve-desc">
+            Completed a structured course covering the fundamentals of modern
+            web development including responsive design and DOM manipulation.
+          </p>
+        </div>
+
+        <div class="achieve-card reveal">
+          <div class="achieve-icon">🥇</div>
+          <h3>Best Capstone Project Award</h3>
+          <p class="achieve-issuer">STI College Cagayan de Oro · 2024</p>
+          <p class="achieve-desc">
+            Placeholder — add your real achievement here. 
+            Won best project in the department's annual IT showcase.
+          </p>
+        </div>
+
+        <div class="achieve-card reveal achieve-placeholder">
+          <div class="achieve-icon">📜</div>
+          <h3>More Certificates Coming Soon</h3>
+          <p class="achieve-issuer">Ongoing Learning · 2025</p>
+          <p class="achieve-desc">
+            Currently pursuing additional certifications in React, Node.js,
+            and cloud computing. Check back for updates!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-title reveal">Contact Me</h2>
+
+      <div class="contact-wrapper">
+
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            Whether you have a project idea, a question, or just want to say hi —
+            my inbox is always open. I'll try my best to get back to you!
+          </p>
+
+          <ul class="contact-links">
+            <li>
+              <a href="mailto:tateraze151@gmail.com" class="contact-link">
+                <span class="contact-link-icon">✉</span>
+                <span>tateraze151@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Dantouji" target="_blank" class="contact-link">
+                <span class="contact-link-icon">🐙</span>
+                <span>github.com/Dantouji</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/ivan.salvador.566148" target="_blank" class="contact-link">
+                <span class="contact-link-icon">👤</span>
+                <span>facebook.com/ivan.salvador.566148</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <!-- Name field -->
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="juan@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Send Message 🚀
+          </button>
+
+          <p class="form-success" id="formSuccess">
+            ✅ Message sent! (This is a UI demo — no actual email was sent.)
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Designed & Built by <strong>Ivan Nicholas Salvador</strong> · 2025
+      </p>
+      <p class="footer-sub">Made with ❤️ using HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, index * 120);
           });
 
-          // Stop observing after triggering
           skillObserver.unobserve(entry.target);
         }
       });
@@ -166,4 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-}); // end DOMContentLoaded
+});
